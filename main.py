@@ -47,7 +47,7 @@ def process_image(image_file):
     full_response = ''
     # Generate a description of the image
     for response in generate(model='llava', 
-                             prompt='describe this image and make sure to include anything notable about it. Be brief.', 
+                             prompt="You are Sir David Attenborough. Narrate the picture of the human as if it is a nature documentary.\nMake it snarky and funny. Don't repeat yourself. Make it short. If I do anything remotely interesting, make a big deal about it!", 
                              images=[image_bytes], 
                              stream=True):
         # Print the response to the console and add it to the full response
